@@ -6361,7 +6361,13 @@
     <message id="20000" name="VV7_CAN">
       <description>The current system altitude.</description>
       <field type="uint64_t" name="time_usec" units="us">Timestamp (UNIX Epoch time or time since system boot). The receiving end can infer timestamp format (since 1.1.1970 or since system boot) by checking for the magnitude of the number.</field>
-      <field type="float" name="vv7_vehiclespeed" units="km/h">This is vv7 vehicle speed.</field>
+      <field type="float" name="vehiclespeed" units="km/h">This is vv7 vehicle speed.</field>
+      <field type="float" name="EngSpeed" units="rpm">This is vv7 engine speed.</field>
+      <field type="float" name="BrakePress" units="par">This is vv7 brake press.</field>
+      <field type="uint8_t" name="AutoSwSts" units=" ">This is vv7 mode switch status.</field>
+      <field type="uint8_t" name="SysCtrState" units=" ">This is vv7 system control state.</field>
+      <field type="uint8_t" name="CurGear" units=" ">This is vv7 current gear.</field>
+      <field type="float" name="SteeringAngle" units="deg">This is vv7 steering angle.</field>
     </message>
     <message id="146" name="CONTROL_SYSTEM_STATE">
       <description>The smoothed, monotonic system state used to feed the control loops of the system.</description>
