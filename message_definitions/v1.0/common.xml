@@ -6369,6 +6369,20 @@
       <field type="uint8_t" name="CurGear" units=" ">This is vv7 current gear.</field>
       <field type="float" name="SteeringAngle" units="deg">This is vv7 steering angle.</field>
     </message>
+    <message id="20001" name="OPOUT_OBJDATA">
+      <description>Object data from openpilot.</description>
+      <field type="float" name="dRel" units="m">relative longitude distance</field>
+      <field type="float" name="yRel" units="m">relative lateral distance</field>
+      <field type="float" name="vRel" units="m/s">relative longitude velocity</field>
+      <field type="float" name="aRel" units="m/s2">relative longitude acceleration</field>
+      <field type="float" name="vLead" units="m/s">target velocity</field>
+      <field type="float" name="vLat" units="m/s">lateral velocity</field>
+      <field type="uint8_t" name="fcw" units=" ">fcw state</field>
+      <field type="uint8_t" name="status" units=" ">target status</field>
+      <field type="float" name="aLeadTau" units="m/s2">target acceleration</field>
+      <field type="float" name="modelProb" units=" ">target probability</field>
+      <field type="uint8_t" name="radar" units=" ">radar object</field>
+    </message>
     <message id="146" name="CONTROL_SYSTEM_STATE">
       <description>The smoothed, monotonic system state used to feed the control loops of the system.</description>
       <field type="uint64_t" name="time_usec" units="us">Timestamp (UNIX Epoch time or time since system boot). The receiving end can infer timestamp format (since 1.1.1970 or since system boot) by checking for the magnitude of the number.</field>
